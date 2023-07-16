@@ -8,10 +8,12 @@ import { Icon } from 'astro-icon';
 
 <Layout title='Portfolio'>
 	<main
-		class='p-0 h-full md:h-screen flex justify-start w-full flex-col lg:flex-row gap-10 bg-main bg-no-repeat bg-cover'
+		class='p-0 max-h-full flex justify-start w-full flex-col lg:flex-row gap-10'
 	>
 		<Presentation />
-		<div class='content-card flex m-auto flex-col mt-0 xl:w-3/5 w-11/12 md:mt-20'>
+		<div
+			class='content-card flex m-auto lg:ml-auto lg:mr-0 flex-col mt-0 lg:w-[70%] w-11/12 h-full'
+		>
 			<div
 				class='hidden lg:flex 2xl:w-7/8 ml-auto shadow-md rounded-xl mb-4 bg-white h-2/5'
 			>
@@ -183,12 +185,53 @@ import { Icon } from 'astro-icon';
 									</p>
 								</div>
 							</div>
+							<div
+							class='box w-full lg:w-[49%] mb-4 flex bg-lime-300 rounded-xl bg-opacity-30 p-2'
+						>
+							<div>
+								<Icon
+									pack='ph'
+									name='code'
+									class='w-12 ml-4 mr-6 text-lime-500'
+								/>
+							</div>
+							<div class='mr-4 mb-4'>
+								<h4
+									class='font-semibold mt-2 mb-2 text-2xl'
+								>
+									Backend
+								</h4>
+								<p class='text-md text-gray-600'>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Ratione nam.
+								</p>
+							</div>
+						</div>
+						<div
+						class='box w-full lg:w-[49%] mb-4 flex bg-lime-300 rounded-xl bg-opacity-30 p-2'
+					>
+						<div>
+							<Icon
+								pack='ph'
+								name='code'
+								class='w-12 ml-4 mr-6 text-lime-500'
+							/>
+						</div>
+						<div class='mr-4 mb-4'>
+							<h4
+								class='font-semibold mt-2 mb-2 text-2xl'
+							>
+								Backend
+							</h4>
+							<p class='text-md text-gray-600'>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ratione nam.
+							</p>
 						</div>
 					</div>
-					<hr class="mt-4">
-					<div class="copyright flex justify-center mt-4">
-						<quote class="text-md text-gray-500 text-center">©2023 All Rights Reserved by Dylas</quote>
+						</div>
 					</div>
+					<hr class='mt-1' />
 				</div>
 			</div>
 		</div>
