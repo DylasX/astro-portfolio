@@ -1,0 +1,71 @@
+---
+//icons
+import { Icon } from 'astro-icon';
+---
+
+<div
+    class='presentation-card flex-col  flex ml-auto mr-auto lg:h-3/4 lg:max-h-[530px] mt-10 pt-4 bg-white md:mt-20 pb-4 w-11/12 lg:w-1/2 xl:w-1/4 shadow-xl rounded-xl'
+>
+    <div
+        class='image-container relative w-full grow flex flex-col md:flex-row justify-center'
+    >
+        <div class='lg:absolute lg:-top-20 z-10 m-auto'>
+            <img class='rounded-xl' src='https://placehold.co/240x240' />
+        </div>
+    </div>
+    <div
+        class='title flex justify-end flex-col w-full mt-5 flex-grow-0 mr-auto text-center'
+    >
+        <h2 class='font-medium text-2xl'>Miguel Sierra</h2>
+        <quote class='font-light text-gray-400'>Desarrollador web</quote>
+        <div class='social-media flex justify-center gap-3 mt-3 [&>svg]:w-6'>
+            <Icon pack='dashicons' name='instagram' class='text-pink-400' />
+            <Icon pack='dashicons' name='twitter' class='text-blue-400' />
+            <Icon pack='fa-brands' name='github' class='text-black' />
+        </div>
+    </div>
+    <div
+        class='contact-me-card mt-2 flex justify-center ml-auto flex-grow-0 mr-auto w-11/12 shadow-xl rounded-xl'
+    >
+        <ul class='p-4 m-auto'>
+            <li class='flex gap-1 items-center w-full mb-4'>
+                <div
+                    class='box-icon w-9 h-9 shadow-md rounded-md hover:bg-gradient-to-r from-sky-400 to-blue-500 hover:text-white text-sky-400 -mt-1 bg-white-100 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
+                >
+                    <Icon pack='fluent' name='mail-20-regular' />
+                </div>
+                <div class='text w-full text-left'>
+                    <p class='text-xs font-light text-gray-400 ml-2'>Email:</p>
+                    <p class='text-xs font-light ml-2'>
+                        miguel-sg01@hotmail.com
+                    </p>
+                </div>
+            </li>
+            <li class='flex gap-1 items-center w-full mb-4'>
+                <div
+                    class='box-icon w-9 h-9 shadow-md rounded-md bg-white-10 hover:bg-gradient-to-r from-sky-400 to-blue-500 hover:text-white text-sky-400 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
+                >
+                    <Icon pack='fluent' name='location-48-regular' />
+                </div>
+                <div class='text w-full text-left'>
+                    <p class='text-xs font-light text-gray-400 ml-2'>
+                        Location:
+                    </p>
+                    <p class='text-xs font-light ml-2'>Colombia, Medellin</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class='actions flex w-4/5 ml-auto mr-auto'>
+        <a
+            href='#'
+            class='rounded-full inline-flex bg-gradient-to-r from-sky-400 to-blue-500 text-white p-4 w-full text-center mt-4 hover:to-blue-800 hover:from-sky-500'
+        >
+            <Icon
+                pack='ph'
+                name='download-thin'
+                class='w-6 ml-auto -mt-1'
+            /><span class='ml-2 mr-auto'>Download CV</span>
+        </a>
+    </div>
+</div>
