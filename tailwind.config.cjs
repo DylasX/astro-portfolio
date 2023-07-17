@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        main: "url('/bg.png')",
+        main: "url('/bg.webp')",
       },
       fontFamily: {
         sans: ['poppins', ...defaultTheme.fontFamily.sans],
