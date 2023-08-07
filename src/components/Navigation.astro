@@ -1,0 +1,84 @@
+---
+import Icon from 'astro-icon';
+---
+
+<ul
+  class='hidden lg:flex 2xl:w-7/8 ml-auto shadow-md rounded-xl mb-4 bg-white h-2/5 p-3'
+>
+  <li role='presentation'>
+    <button
+      id='about-tab'
+      role='tab'
+      type='button'
+      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
+    >
+      <Icon pack='radix-icons' name='person' class='w-6 m-auto' />
+      <p class='m-auto'>About</p>
+    </button>
+  </li>
+  <li role='presentation'>
+    <button
+      id='resume-tab'
+      role='tab'
+      type='button'
+      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
+    >
+      <Icon pack='ep' name='document' class='w-6 m-auto' />
+      <p class='m-auto'>Resume</p>
+    </button>
+  </li>
+  <li role='presentation'>
+    <button
+      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
+    >
+      <Icon pack='ic' name='round-work-outline' class='w-6 m-auto' />
+      <p class='m-auto'>Works</p>
+    </button>
+  </li>
+  <li role='presentation'>
+    <button
+      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center'
+    >
+      <Icon pack='fluent' name='mail-20-regular' class='w-6 m-auto' />
+      <p class='ml-auto mr-auto'>Contact</p>
+    </button>
+  </li>
+</ul>
+
+<script>
+  import { Tabs } from 'flowbite';
+  import type { TabsOptions, TabsInterface, TabItem } from 'flowbite';
+
+  // create an array of objects with the id, trigger element (eg. button), and the content element
+  const tabElements: TabItem[] = [
+    {
+      id: 'about',
+      triggerEl: document.querySelector('#about-tab')!,
+      targetEl: document.querySelector('#about')!,
+    },
+    {
+      id: 'resume',
+      triggerEl: document.querySelector('#resume-tab')!,
+      targetEl: document.querySelector('#resume')!,
+    },
+  ];
+
+  // options with default values
+  const options: TabsOptions = {
+    defaultTabId: 'about',
+    activeClasses:
+      'bg-sky-400 text-white hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-500 hover:text-white',
+    inactiveClasses:
+      'hover:bg-gradient-to-r from-sky-400 to-blue-500 hover:text-white',
+    onShow: () => {
+      console.log('tab is shown');
+    },
+  };
+
+  /*
+   * tabElements: array of tab objects
+   * options: optional
+   */
+  const tabs: TabsInterface = new Tabs(tabElements, options);
+
+</script>
