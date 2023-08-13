@@ -4,13 +4,13 @@ import { Icon } from 'astro-icon';
 ---
 
 <div
-    class='presentation-card flex-col relative mt-5 lg:mt-0 lg:fixed flex ml-auto mr-auto h-full lg:max-h-[530px]  pt-4 bg-white pb-4 w-11/12 lg:w-1/4 shadow-xl rounded-xl'
+    class='presentation-card animate-fade-down md:animate-fade-right animate-duration-500 animate-delay-200 flex-col relative mt-5 lg:mt-0 lg:fixed flex ml-auto mr-auto h-full lg:max-h-[530px]  pt-4 bg-white pb-4 w-11/12 lg:w-1/4 shadow-2xl rounded-xl'
 >
     <div
         class='image-container relative w-full grow flex flex-col md:flex-row justify-center'
     >
         <div class='lg:absolute lg:-top-20 z-10 m-auto'>
-            <img class='rounded-xl' src='https://placehold.co/240x240' width="240" alt="profile-photo" height="240" />
+            <img class='rounded-xl' src='/astro-portfolio/profile.webp' width="240" alt="profile-photo" height="240" />
         </div>
     </div>
     <div
@@ -59,7 +59,7 @@ import { Icon } from 'astro-icon';
     <div class='actions flex w-4/5 ml-auto mr-auto'>
         <a
             href='#'
-            class='rounded-full inline-flex bg-gradient-to-r from-sky-400 to-blue-500 text-white p-4 w-full text-center mt-4 hover:to-blue-800 hover:from-sky-500'
+            class='rounded-full inline-flex bg-sky-400 text-white p-4 w-full text-center mt-4 hover:bg-gradient-to-l hover:to-sky-400 hover:from-blue-600'
         >
             <Icon
                 pack='ph'

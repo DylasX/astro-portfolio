@@ -2,10 +2,9 @@
 import About from '../components/About.astro';
 import Navigation from '../components/Navigation.astro';
 import Presentation from '../components/Presentation.astro';
-import Resume from '../components/Resume.astro';
+import Works from '../components/Works.astro';
 import Layout from '../layouts/Layout.astro';
 
-import { Tabs } from 'astro-tabs';
 ---
 
 <Layout title='Portfolio'>
@@ -14,12 +13,12 @@ import { Tabs } from 'astro-tabs';
   >
     <Presentation />
     <section
-      class='content-card flex m-auto lg:ml-auto lg:mr-0 flex-col mt-0 lg:w-[70%] w-11/12 h-full'
+      class='content-card animate-fade-down md:animate-fade-left animate-duration-500 animate-delay-200 flex m-auto lg:ml-auto lg:mr-0 flex-col mt-0 lg:w-[70%] w-11/12 h-full min-h-[1200px]'
     >
       <Navigation />
       <section id='content'>
         <About />
-        <Resume />
+        <Works />
       </section>
     </section>
   </main>

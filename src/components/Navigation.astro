@@ -3,14 +3,14 @@ import Icon from 'astro-icon';
 ---
 
 <ul
-  class='hidden lg:flex 2xl:w-7/8 ml-auto shadow-md rounded-xl mb-4 bg-white h-2/5 p-3'
+  class='hidden lg:flex 2xl:w-7/8 ml-auto shadow-lg rounded-xl mb-4 bg-white h-2/5 p-3'
 >
   <li role='presentation'>
     <button
       id='about-tab'
       role='tab'
       type='button'
-      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
+      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center mr-2'
     >
       <Icon pack='radix-icons' name='person' class='w-6 m-auto' />
       <p class='m-auto'>About</p>
@@ -18,18 +18,10 @@ import Icon from 'astro-icon';
   </li>
   <li role='presentation'>
     <button
-      id='resume-tab'
+      id='works-tab'
       role='tab'
       type='button'
-      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
-    >
-      <Icon pack='ep' name='document' class='w-6 m-auto' />
-      <p class='m-auto'>Resume</p>
-    </button>
-  </li>
-  <li role='presentation'>
-    <button
-      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center mr-2'
+      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center mr-2'
     >
       <Icon pack='ic' name='round-work-outline' class='w-6 m-auto' />
       <p class='m-auto'>Works</p>
@@ -37,10 +29,10 @@ import Icon from 'astro-icon';
   </li>
   <li role='presentation'>
     <button
-      class='rounded-md flex flex-col bg-gray-200 text-slate-600 p-4 w-24 text-center'
+      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center'
     >
       <Icon pack='fluent' name='mail-20-regular' class='w-6 m-auto' />
-      <p class='ml-auto mr-auto'>Contact</p>
+      <p class='ml-auto mr-auto'>Projects</p>
     </button>
   </li>
 </ul>
@@ -57,9 +49,9 @@ import Icon from 'astro-icon';
       targetEl: document.querySelector('#about')!,
     },
     {
-      id: 'resume',
-      triggerEl: document.querySelector('#resume-tab')!,
-      targetEl: document.querySelector('#resume')!,
+      id: 'works',
+      triggerEl: document.querySelector('#works-tab')!,
+      targetEl: document.querySelector('#works')!,
     },
   ];
 
@@ -80,5 +72,4 @@ import Icon from 'astro-icon';
    * options: optional
    */
   const tabs: TabsInterface = new Tabs(tabElements, options);
-
 </script>

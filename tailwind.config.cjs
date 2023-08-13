@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        main: "url('/bg.webp')",
+        main: "url('/astro-portfolio/Portfolio.webp')",
       },
       fontFamily: {
         sans: ['poppins', ...defaultTheme.fontFamily.sans],
@@ -18,5 +18,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('tailwindcss-animated')],
 };
