@@ -1,76 +1,108 @@
 ---
-import Icon from 'astro-icon';
-
-const experience = [
+const education = [
   {
-    company: 'Free lancer',
-    role: '',
+    company: 'Universidad Autónoma Latinoamericana',
+    title: 'Ingeniero informático | Computer Engineer',
+    time: '2014-2019',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400'
+  },
+  {
+    company: 'Linux foundation',
+    title: 'Node.js Services Developer Certified',
+    time: '2023 - Current',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400'
+  }
+]
+const experiences = [
+  {
+    company: 'Freelancer',
+    role: 'Developer',
     description:
       'Managed projects for various clients, consistently meeting or exceeding project requirements and deadlines.',
-    icon: {},
-    class: '',
-    time: '',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'November 2016 - March 2018',
+    url: '',
   },
   {
     company: 'hackU',
-    role: 'developer',
+    role: 'Developer',
     description:
       'Participated in a new educational startup in Colombia developing a new platform with different technologies.',
-    icon: {},
-    class: '',
-    time: '',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'September 2018 - January 2019',
+    url: 'https://hacku.co',
   },
   {
     company: 'hackU',
-    role: 'Dev Lead',
-    description: 'Lead tech process in a educational startup.',
-    icon: {},
-    class: '',
-    time: '',
+    role: 'Developer Lead',
+    description: 'Lead a team to achieve requirements of a new educational product.',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'January 2019 - January 2020',
+    url: 'https://hacku.co',
   },
   {
     company: 'Julius2Grow',
     role: 'Fullstack developer',
     description:
-      'Developed an e-commerce platform for the building sector in Colombia',
-    icon: {},
-    class: '',
-    time: '',
+      'Developed an e-commerce platform for the building industry in Colombia',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'January 2020 - November 2020',
+    url: 'https://www.julius2grow.com/es/inicio/',
   },
   {
     company: 'CondorLabs',
     role: 'Backend developer',
     description:
       'Worked in one of the biggest digital wallet to manage certificates of nurses,medics and other kind of health employees.',
-    icon: {},
-    class: '',
-    time: '',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'November 2020 - May 2021',
+    url: 'https://condorlabs.io',
   },
   {
     company: 'Globant',
     role: 'Node.js developer',
     description:
-      'Worked for a huge educational company at the US, mainteining auth services.',
-    icon: {},
-    class: '',
-    time: '',
+      'Worked for a huge educational company at the US, maintaining authentication and authorization services.',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'May 2021 - April 2022',
+    url: 'https://globant.com',
   },
   {
     company: 'hackU',
     role: 'Frontend Developer',
-    description: 'Did a new front end platform using a high tech stack.',
-    icon: {},
-    class: '',
-    time: '',
+    description: 'Remaked a front application for a startup in Colombia.',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'July 2021',
+    url: 'https://hacku.co',
   },
   {
     company: 'Gorilla Logic',
     role: 'Fullstack engineer',
     description:
       'Worked for a huge startup which provides an ERP cloud for governments at US.',
-    icon: {},
-    class: '',
-    time: '',
+    class:
+      'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+    time: 'April 2022 - Current',
+    url: 'https://gorillalogic.com',
   },
 ];
 ---
@@ -85,94 +117,80 @@ const experience = [
       <h3
         class='text-4xl font-semibold flex flex-col md:flex-row md:inline-flex'
       >
-        Works <hr
-          class='h-1 w-40 mt-5 ml-2 rounded-lg bg-gradient-to-r from-sky-400 to-blue-500'
+        Resume <hr
+          class='h-1 w-40 mt-5 ml-2 rounded-lg bg-gradient-to-r from-sky-300 to-sky-600'
         />
       </h3>
       <p class='mt-4 font-normal text-justify'>
-        Explore a curated collection of projects and experience, showcasing my
-        dedication to excellence in software development. From innovative
-        applications to data-driven solutions, each piece reflects my commitment
-        to pushing technical boundaries and creating impactful, high-quality
-        software.
+        Explore my education and experience, showcasing my dedication to
+        excellence in software development. From innovative applications to
+        data-driven solutions.
       </p>
-      <h3 class='text-4xl font-semibold inline-flex mt-10'>Experience</h3>
-      <div class='what-i-do flex mt-10'>
+      <h3 class='text-3xl font-semibold inline-flex mt-10'>Experience</h3>
+      <div class='flex mt-10'>
         <div class='flex flex-row flex-wrap justify-between w-full'>
           <ol class='relative border-l border-gray-200 dark:border-gray-700'>
-            <li class='mb-10 ml-4'>
-              <div
-                class='absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'
-              >
-              </div>
-              <time
-                class='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'
-                >February 2022</time
-              >
-              <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
-                Application UI code in Tailwind CSS
-              </h3>
-              <p
-                class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'
-              >
-                Get access to over 20+ pages including a dashboard layout,
-                charts, kanban board, calendar, and pre-order E-commerce &
-                Marketing pages.
-              </p>
-              <a
-                href='#'
-                class='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700'
-                >Learn more <svg
-                  class='w-3 h-3 ml-2'
-                  aria-hidden='true'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 14 10'
-                >
-                  <path
-                    stroke='currentColor'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M1 5h12m0 0L9 1m4 4L9 9'></path>
-                </svg></a
-              >
-            </li>
-            <li class='mb-10 ml-4'>
-              <div
-                class='absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'
-              >
-              </div>
-              <time
-                class='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'
-                >March 2022</time
-              >
-              <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
-                Marketing UI design in Figma
-              </h3>
-              <p class='text-base font-normal text-gray-500 dark:text-gray-400'>
-                All of the pages and components are first designed in Figma and
-                we keep a parity between the two versions even as we update the
-                project.
-              </p>
-            </li>
-            <li class='ml-4'>
-              <div
-                class='absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'
-              >
-              </div>
-              <time
-                class='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'
-                >April 2022</time
-              >
-              <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
-                E-Commerce UI code in Tailwind CSS
-              </h3>
-              <p class='text-base font-normal text-gray-500 dark:text-gray-400'>
-                Get started with dozens of web components and interactive
-                elements built on top of Tailwind CSS.
-              </p>
-            </li>
+            {
+              experiences.map((experience) => (
+                <li class='mb-10 ml-4'>
+                  <div class={experience.class} />
+                  <time class={experience.classTime}>{experience.time}</time>
+                  <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
+                    {experience.company} - {experience.role}
+                  </h3>
+                  <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                    {experience.description}
+                  </p>
+                  {experience.url ? (
+                    <a
+                      href={experience.url}
+                      target='_blank'
+                      class='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  hover:text-white hover:bg-sky-400 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-white focus:bg-sky-400 '
+                    >
+                      Learn more{' '}
+                      <svg
+                        class='w-3 h-3 ml-2'
+                        aria-hidden='true'
+                        xmlns='http://www.w3.org/2000/svg'
+                        fill='none'
+                        viewBox='0 0 14 10'
+                      >
+                        <path
+                          stroke='currentColor'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          stroke-width='2'
+                          d='M1 5h12m0 0L9 1m4 4L9 9'
+                        />
+                      </svg>
+                    </a>
+                  ) : (
+                    ''
+                  )}
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+      </div>
+      <h3 class='text-3xl font-semibold inline-flex mt-10'>Education</h3>
+      <div class='flex mt-10'>
+        <div class='flex flex-row flex-wrap justify-between w-full'>
+          <ol class='relative border-l border-gray-200 dark:border-gray-700'>
+            {
+              education.map((education) => (
+                <li class='mb-10 ml-4'>
+                  <div class={education.class} />
+                  <time class={education.classTime}>{education.time}</time>
+                  <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
+                    {education.title}
+                  </h3>
+                  <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                    {education.company}
+                  </p>
+                </li>
+              ))
+            }
           </ol>
         </div>
       </div>

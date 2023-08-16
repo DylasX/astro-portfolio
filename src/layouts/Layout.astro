@@ -16,9 +16,21 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main class='p-0 md:p-20 lg:pr-5 lg:pl-5 xl:pl-20 xl:pr-20 bg-main bg-no-repeat bg-cover min-h-screen'>
-      <slot />
-    </main>
+    <svg
+      viewBox='0 0 900 600'
+      width='900'
+      height='600'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      class='absolute top-0 rotate-180 w-full h-max [&>path]:fill-sky-400'
+      version='1.1'
+      ><path
+        d='M0 493L21.5 487.8C43 482.7 86 472.3 128.8 461.5C171.7 450.7 214.3 439.3 257.2 442.5C300 445.7 343 463.3 385.8 481C428.7 498.7 471.3 516.3 514.2 517.7C557 519 600 504 642.8 495.7C685.7 487.3 728.3 485.7 771.2 492.2C814 498.7 857 513.3 878.5 520.7L900 528L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z'
+        fill='currentColor'
+        stroke-linecap='round'
+        stroke-linejoin='miter'></path></svg
+    >
+    <slot />
     <script src='../../node_modules/flowbite/dist/flowbite.min.js'></script>
   </body>
 </html>

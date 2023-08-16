@@ -10,9 +10,9 @@ import Icon from 'astro-icon';
       id='about-tab'
       role='tab'
       type='button'
-      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center mr-2'
+      class='rounded-md flex flex-col border text-slate-600 p-4 w-24 text-center mr-2'
     >
-      <Icon pack='radix-icons' name='person' class='w-6 m-auto' />
+      <Icon pack='ph' name='user-circle-thin' class='w-8 m-auto' />
       <p class='m-auto'>About</p>
     </button>
   </li>
@@ -21,17 +21,20 @@ import Icon from 'astro-icon';
       id='works-tab'
       role='tab'
       type='button'
-      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center mr-2'
+      class='rounded-md flex flex-col border text-slate-600 p-4 w-24 text-center mr-2'
     >
-      <Icon pack='ic' name='round-work-outline' class='w-6 m-auto' />
-      <p class='m-auto'>Works</p>
+      <Icon pack='ph' name='book-thin' class='w-8 m-auto' />
+      <p class='m-auto'>Resume</p>
     </button>
   </li>
   <li role='presentation'>
     <button
-      class='rounded-md flex flex-col text-slate-600 p-4 w-24 text-center'
+      id='projects-tab'
+      role='tab'
+      type='button'
+      class='rounded-md flex flex-col border text-slate-600 p-4 w-24 text-center'
     >
-      <Icon pack='fluent' name='mail-20-regular' class='w-6 m-auto' />
+      <Icon pack='ph' name='bag-simple-thin' class='w-8 m-auto' />
       <p class='ml-auto mr-auto'>Projects</p>
     </button>
   </li>
@@ -53,15 +56,20 @@ import Icon from 'astro-icon';
       triggerEl: document.querySelector('#works-tab')!,
       targetEl: document.querySelector('#works')!,
     },
+    {
+      id: 'projects',
+      triggerEl: document.querySelector('#projects-tab')!,
+      targetEl: document.querySelector('#projects')!,
+    },
   ];
 
   // options with default values
   const options: TabsOptions = {
     defaultTabId: 'about',
     activeClasses:
-      'bg-sky-400 text-white hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-500 hover:text-white',
+      'bg-sky-400 text-white hover:bg-gradient-to-r hover:from-sky-300 hover:to-sky-500 hover:text-white',
     inactiveClasses:
-      'hover:bg-gradient-to-r from-sky-400 to-blue-500 hover:text-white',
+      'hover:bg-gradient-to-r from-sky-300 to-sky-500 hover:text-white',
     onShow: () => {
       console.log('tab is shown');
     },
