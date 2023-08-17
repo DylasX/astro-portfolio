@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        main: "url('/astro-portfolio/Portfolio.webp')",
+        main: "url('/Portfolio.webp')",
       },
       fontFamily: {
         sans: ['poppins', ...defaultTheme.fontFamily.sans],
