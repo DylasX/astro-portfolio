@@ -1,6 +1,17 @@
 ---
 //icons
 import { Icon } from 'astro-icon';
+const socialMedia = {
+    instagram: {
+        url: 'https://instagram.com/_dylas_'
+    },
+    twitter: {
+        url: 'https://twitter.com/_dylas_'
+    },
+    github: {
+        url: 'https://github.com/DylasX'
+    }
+}
 ---
 
 <div
@@ -19,10 +30,16 @@ import { Icon } from 'astro-icon';
     >
         <h2 class='font-medium text-2xl'>Miguel Sierra</h2>
         <quote class='font-light text-gray-500'>Desarrollador web</quote>
-        <div class='social-media flex justify-center gap-3 mt-3 [&>svg]:w-6'>
-            <Icon pack='dashicons' name='instagram' class='text-pink-400' />
-            <Icon pack='dashicons' name='twitter' class='text-blue-400' />
-            <Icon pack='fa-brands' name='github' class='text-black' />
+        <div class='social-media flex justify-center gap-3 mt-3 '>
+            <a href={socialMedia.instagram.url} target="_blank" class="[&>svg]:w-6">
+                <Icon pack='dashicons' name='instagram' class='text-pink-400' />
+            </a>
+            <a href={socialMedia.twitter.url} target="_blank" class="[&>svg]:w-6">
+                <Icon pack='dashicons' name='twitter' class='text-blue-400' />
+            </a>
+            <a href={socialMedia.github.url} target="_blank" class="[&>svg]:w-6">
+                <Icon pack='fa-brands' name='github' class='text-black' />
+            </a>
         </div>
     </div>
     <div
@@ -31,7 +48,7 @@ import { Icon } from 'astro-icon';
         <ul class='p-4 m-auto'>
             <li class='flex gap-1 items-center w-full mb-4'>
                 <div
-                    class='box-icon w-9 h-9 shadow-md rounded-md hover:bg-gradient-to-r from-sky-300 to-sky-500 hover:text-white text-sky-400 -mt-1 bg-white-100 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
+                    class='box-icon w-9 h-9 shadow-md rounded-md text-sky-400 -mt-1 bg-white-100 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
                 >
                     <Icon pack='fluent' name='mail-20-regular' />
                 </div>
@@ -44,7 +61,7 @@ import { Icon } from 'astro-icon';
             </li>
             <li class='flex gap-1 items-center w-full mb-4'>
                 <div
-                    class='box-icon w-9 h-9 shadow-md rounded-md bg-white-10 hover:bg-gradient-to-r from-sky-300 to-sky-500 hover:text-white text-sky-400 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
+                    class='box-icon w-9 h-9 shadow-md rounded-md bg-white-10 text-sky-400 [&>svg]:w-6 [&>svg]:m-auto [&>svg]:mt-1.5'
                 >
                     <Icon pack='fluent' name='location-48-regular' />
                 </div>
@@ -59,14 +76,14 @@ import { Icon } from 'astro-icon';
     </div>
     <div class='actions flex w-4/5 ml-auto mr-auto'>
         <a
-            href='#'
+            href='mailto:miguel-sg01@hotmail.com'
             class='rounded-full inline-flex bg-sky-400 text-white p-4 w-full text-center mt-4 hover:bg-gradient-to-l hover:to-sky-400 hover:from-sky-500'
         >
             <Icon
                 pack='ph'
                 name='download-thin'
                 class='w-6 ml-auto -mt-1'
-            /><span class='ml-2 mr-auto'>Download CV</span>
+            /><span class='ml-2 mr-auto'>Talk to me</span>
         </a>
     </div>
 </div>
