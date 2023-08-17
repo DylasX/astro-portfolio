@@ -6,7 +6,7 @@ const education = [
     time: '2014-2019',
     class:
       'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
-    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400'
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
   },
   {
     company: 'Linux foundation',
@@ -14,9 +14,9 @@ const education = [
     time: '2023 - Current',
     class:
       'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
-    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400'
-  }
-]
+    classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
+  },
+];
 const experiences = [
   {
     company: 'Freelancer',
@@ -43,7 +43,8 @@ const experiences = [
   {
     company: 'hackU',
     role: 'Developer Lead',
-    description: 'Lead a team to achieve requirements of a new educational product.',
+    description:
+      'Lead a team to achieve requirements of a new educational product.',
     class:
       'absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -left-1.5 border border-white',
     classTime: 'mb-1 text-sm font-normal leading-none text-blue-400',
@@ -107,9 +108,9 @@ const experiences = [
 ];
 ---
 
-<section id='works' role='tabpanel' aria-labelledby='works-tab'>
+<section id='resume' role='tabpanel' aria-labelledby='resume-tab'>
   <div
-    class='content flex flex-col w-full shadow-md rounded-xl p-10 bg-white h-full mb-5'
+    class='flex flex-col w-full shadow-2xl rounded-xl p-10 bg-white h-full mb-5'
   >
     <span
       class='animate-fade-down animate-once animate-duration-500 animate-ease-in-out animate-normal animate-fill-both'
@@ -129,19 +130,19 @@ const experiences = [
       <h3 class='text-3xl font-semibold inline-flex mt-10'>Experience</h3>
       <div class='flex mt-10'>
         <div class='flex flex-row flex-wrap justify-between w-full'>
-          <ol class='relative border-l border-gray-200 dark:border-gray-700'>
+          <ol class='relative border-l border-gray-200'>
             {
               experiences.map((experience) => (
                 <li class='mb-10 ml-4'>
                   <div class={experience.class} />
                   <time class={experience.classTime}>{experience.time}</time>
-                  <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
+                  <h3 class='text-lg font-semibold text-gray-900'>
                     {experience.company} - {experience.role}
                   </h3>
-                  <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                  <p class='mb-4 text-base font-normal text-gray-500'>
                     {experience.description}
                   </p>
-                  {experience.url ? (
+                  {experience.url && (
                     <a
                       href={experience.url}
                       target='_blank'
@@ -164,8 +165,6 @@ const experiences = [
                         />
                       </svg>
                     </a>
-                  ) : (
-                    ''
                   )}
                 </li>
               ))
@@ -176,16 +175,16 @@ const experiences = [
       <h3 class='text-3xl font-semibold inline-flex mt-10'>Education</h3>
       <div class='flex mt-10'>
         <div class='flex flex-row flex-wrap justify-between w-full'>
-          <ol class='relative border-l border-gray-200 dark:border-gray-700'>
+          <ol class='relative border-l border-gray-200'>
             {
               education.map((education) => (
                 <li class='mb-10 ml-4'>
                   <div class={education.class} />
                   <time class={education.classTime}>{education.time}</time>
-                  <h3 class='text-lg font-semibold text-gray-900 dark:text-white'>
+                  <h3 class='text-lg font-semibold text-gray-900 '>
                     {education.title}
                   </h3>
-                  <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                  <p class='mb-4 text-base font-normal text-gray-500 '>
                     {education.company}
                   </p>
                 </li>

@@ -1,108 +1,63 @@
 ---
 import Icon from 'astro-icon';
-const myProjects = [
-  {
-    title: 'Software Development',
-    description:
-      'Proficient in designing, developing, and maintaining high-quality software solutions',
-    icon: {
-      pack: 'ph',
-      name: 'code-thin',
-      class: 'w-12 m-auto md:ml-4 text-red-500',
+const myProjects = {
+  firstColumn: [
+    {
+      title: 'Pokedex',
+      description:
+        'The purpose of this project is to showcase a simple Pokedex application built with JavaScript.',
+      image: '/astro-portfolio/projects/pokedex.webp',
+      url: 'https://github.com/DylasX/pokedex-wwc',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-red-200',
-  },
-  {
-    title: 'Leadership',
-    description:
-      'Experienced in leading and managing development teams to achieve project goals.',
-    icon: {
-      pack: 'ph',
-      name: 'handshake-thin',
-      class: 'w-12 m-auto md:ml-4 text-blue-500',
+    {
+      title: 'Vivefit',
+      description: 'App to match people with virtual trainers.',
+      image: '/astro-portfolio/projects/vivefit.webp',
+      url: '#',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-blue-200',
-  },
-  {
-    title: 'Technical Problem Solving',
-    description:
-      'Capable of analyzing complex technical challenges and delivering effective solutions.',
-    icon: {
-      pack: 'ph',
-      name: 'intersect-thin',
-      class: 'w-12 m-auto md:ml-4 text-green-500',
+    {
+      title: 'Tamagotchi',
+      description:
+        'This is a simple Tamagotchi simulation created using the p5.js library.',
+      image: '/astro-portfolio/projects/tamagotchi.webp',
+      url: 'https://github.com/DylasX/tamagotchi-p5js',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-green-200',
-  },
-  {
-    title: 'Agile Methodologies',
-    description:
-      'Practitioner of Agile and Scrum methodologies for efficient project management.',
-    icon: {
-      pack: 'ph',
-      name: 'path-thin',
-      class: 'w-12 m-auto md:ml-4 text-yellow-500',
+    {
+      title: 'Games with JS',
+      description:
+        'This is a collection of games done in less than a hour only using JS.',
+      image: '/astro-portfolio/projects/games.webp',
+      url: 'https://github.com/DylasX/GamesChallenges',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-yellow-200',
-  },
-  {
-    title: 'Web Development',
-    description:
-      'Expertise in creating dynamic and responsive web applications.',
-    icon: {
-      pack: 'ph',
-      name: 'globe-hemisphere-west-thin',
-      class: 'w-12 m-auto md:ml-4 text-purple-500',
+  ],
+  secondColumn: [
+    {
+      title: 'hackU',
+      description:
+        'hackU is a educational startup with more than 100k active users',
+      image: '/astro-portfolio/projects/hacku.webp',
+      url: 'https://hacku.com',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-purple-200',
-  },
-  {
-    title: 'Version control',
-    description:
-      'Expertise in creating dynamic and responsive web applications.',
-    icon: {
-      pack: 'ph',
-      name: 'git-branch-thin',
-      class: 'w-12 m-auto md:ml-4 text-cyan-500',
+    {
+      title: 'Portfolio',
+      description:
+        'The purpose of this project is to showcase my skills, projects, and experience.',
+      image: '/astro-portfolio/projects/portfolio.webp',
+      url: '#',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-cyan-200',
-  },
-  {
-    title: 'Performance Optimization',
-    description:
-      'Optimizing applications for better performance and scalability.',
-    icon: {
-      pack: 'ph',
-      name: 'app-window-thin',
-      class: 'w-12 m-auto md:ml-4 text-teal-500',
+    {
+      title: 'More projects',
+      description: 'Look all my projects here.',
+      image: '/astro-portfolio/projects/github.webp',
+      url: 'https://github.com/DylasX/',
     },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-teal-200',
-  },
-  {
-    title: 'Passion for Learning',
-    description:
-      'Committed to continuous learning and self-improvement in the ever-evolving tech landscape.',
-    icon: {
-      pack: 'ph',
-      name: 'book-bookmark-thin',
-      class: 'w-12 m-auto md:ml-4 text-orange-500',
-    },
-    class:
-      'box w-full lg:w-[49%] mb-4 flex flex-col text-center md:text-left md:flex-row rounded-xl bg-opacity-30 p-2 bg-orange-200',
-  },
-];
+  ],
+};
 ---
 
 <section id='projects' role='tabpanel' aria-labelledby='projects-tab'>
   <div
-    class='content flex flex-col w-full shadow-2xl rounded-xl p-10 bg-white h-full mb-5'
+    class='flex flex-col w-full shadow-2xl rounded-xl p-10 bg-white h-full mb-5'
   >
     <span
       class='animate-fade-down animate-once animate-duration-500 animate-ease-in-out animate-normal animate-fill-both'
@@ -115,19 +70,55 @@ const myProjects = [
         />
       </h3>
       <p class='mt-4 font-normal text-justify'>
-        With over 6 years of experience in software development, including
-        leadership roles, I'm a computer engineering graduate passionate about
-        technology. I excel in full-stack development, solving complex problems,
-        and using Agile methodologies for efficient project management. I'm
-        skilled in web development, API integration, and database design.
-        Continuous learning, innovation, and a commitment to quality drive my
-        work. Let me show you all the exciting things that reflect my dedication
-        to pushing the boundaries of technology.
+        Welcome to the Projects section of my portfolio! Here, you can explore a
+        collection of my past and current projects that showcase my skills,
+        creativity, and problem-solving abilities. From web applications games
+        and everything in between, these projects highlight my journey as a
+        developer and my passion for building innovative solutions.
       </p>
-      <h3 class='text-3xl font-semibold inline-flex mt-10'>Skills</h3>
+      <h3 class='text-3xl font-semibold inline-flex mt-10'>Last work</h3>
       <div class='what-i-do flex mt-10'>
         <div class='flex flex-row flex-wrap justify-between w-full'>
-
+          <div class='grid grid-cols-2 md:grid-cols-2 gap-4'>
+            <div class='grid gap-4'>
+              {
+                myProjects.firstColumn.map((project) => (
+                  <div class='relative shadow-lg'>
+                    <div class='hidden absolute md:block h-4 md:h-32 w-full bottom-0 text-center p-4 overflow-scroll md:overflow-hidden z-20 bg-sky-400  text-white'>
+                      <h2 class='text-xl font-extrabold'>{project.title}</h2>
+                      <p class='text-md'>{project.description}</p>
+                    </div>
+                    <a href={project.url} class="hover:brightness-75" target='_blank'>
+                      <img
+                        class='h-auto m-auto max-w-full rounded-lg  z-10'
+                        src={project.image}
+                        alt={project.description}
+                      />
+                    </a>
+                  </div>
+                ))
+              }
+            </div>
+            <div class='grid gap-4'>
+              {
+                myProjects.secondColumn.map((project) => (
+                  <div class='shadow-lg relative rounded-md'>
+                    <div class='hidden absolute md:block h-4 md:h-28 w-full bottom-0 text-center p-4 overflow-scroll md:overflow-hidden z-20 bg-sky-400  text-white'>
+                      <h2 class='text-xl font-extrabold'>{project.title}</h2>
+                      <p class='text-md'>{project.description}</p>
+                    </div>
+                    <a href={project.url} target='_blank'>
+                      <img
+                        class='h-auto max-w-full m-auto rounded-lg hover:brightness-75 z-10'
+                        src={project.image}
+                        alt={project.description}
+                      />
+                    </a>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
         </div>
       </div>
       <hr class='mt-1' />
