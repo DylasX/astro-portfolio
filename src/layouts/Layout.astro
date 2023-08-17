@@ -8,13 +8,16 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang='en'>
   <head>
+    <link rel="icon" type="image/x-icon" href="profile.ico">
     <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name='generator' content={Astro.generator} />
-    <meta charset="UTF-8">
     <meta name="description" content="I'm Miguel Sierra, a passionate software engineer specializing in web development and problem-solving. Explore my portfolio to see my projects and skills.">
     <meta name="keywords" content="software engineer, web development, portfolio, projects, skills">
-    <meta name="author" content="Miguel Sierra">
+    <meta name="author" content="Dylas">
+    <meta name="language" content="en">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#38AFFF"> <!-- Customize with your theme color -->
     <!-- Open Graph meta tags (for social media sharing) -->
@@ -27,11 +30,7 @@ const { title } = Astro.props;
     <meta name="twitter:title" content="Miguel Sierra - Software Engineer Portfolio">
     <meta name="twitter:description" content="I'm Miguel Sierra, a passionate software engineer specializing in web development and problem-solving. Explore my portfolio to see my projects and skills.">
     <meta name="twitter:image" content="/profile.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <link rel="icon" type="image/x-icon" href="profile.ico">
-    
-    <title>{title}</title>
+    <meta name="twitter:card" content="summary_large_image">    
   </head>
   <body>
     <svg xmlns='http://www.w3.org/2000/svg' class="absolute" viewBox='0 0 1440 320'
